@@ -22,7 +22,7 @@ TOMAP_DIR="${SRPMS_DIR}"
 map_uid_gid_to_existing_users
 
 log "Now downloading build dependencies, could take a while..."
-yum makecache fast
+yum makecache
 # we don't check the gpg signature at this time, we don't really care;
 # if the signature check fails it will fail later.
 yum-builddep -y --nogpgcheck "${SRPMS_DIR}/${SRCRPM}"
